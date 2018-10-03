@@ -5,7 +5,7 @@
 <ul>
 	{% for song in songs %}
 		<li><a href = "{% url 'song_detail' pk=song.pk %}">{{ song.title }}</a>, 
-		by {{ song.artist }}</li>
+			by <a href="{% url 'artist_detail' pk=song.artist.id %}" >{{ song.artist }} </a></li>
 	{% endfor %}
 </ul>
 {% endblock %}
