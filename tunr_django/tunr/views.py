@@ -13,3 +13,7 @@ def song_list(request):
 def artist_detail(request, pk):
 	artist = Artist.objects.get(id=pk)
 	return render(request, 'artist_detail.html', {'artist': artist})
+
+def song_detail(request,pk):
+	song = Song.objects.get(id=pk)
+	return render(request, 'song_detail.html', {'song': song})	
