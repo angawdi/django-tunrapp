@@ -39,3 +39,9 @@ def artist_edit(request, pk):
 	else:
 		form = ArtistForm(instance=artist)
 		return render(request, 'artist_form.html', {'form': form})
+
+def artist_delete(request, pk):
+	Artist.objects.get(id=pk).delete()
+	return redirect('artist_list')
+
+
