@@ -11,4 +11,8 @@
 		<li>{{ song.title }} - {{ song.album}}</li>
 	{% endfor %}
 </ul>
+
+<br><br><br>
+
+<a href="{% url 'artist_delete' pk=artist.pk %}" class="delete">Delete</a>
 {% endblock %}
