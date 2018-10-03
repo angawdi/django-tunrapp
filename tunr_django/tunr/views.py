@@ -10,6 +10,6 @@ def song_list(request):
 	songs = Song.objects.all()
 	return render(request, 'song_list.html', {'songs': songs})
 
-def artist_details(request, pk):
+def artist_detail(request, pk):
 	artist = Artist.objects.get(id=pk)
-	return render(request, 'artist_details.html', {'artist': artist})
+	return render(request, 'artist_detail.html', {'artist': artist})

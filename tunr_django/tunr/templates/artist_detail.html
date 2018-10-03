@@ -1,0 +1,14 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h2>{{ artist.name }}</h2>
+<h4>Home country: {{ artist.nationality}}</h4>
+<img src="{{ artist.photo_url}}" alt="artist_photo" class="artist-photo">
+
+<h3>Songs</h3>
+<ul>
+	{% for song in artist.songs.all %}
+		<li>{{ song.title }} - {{ song.album}}</li>
+	{% endfor %}
+</ul>
+{% endblock %}
