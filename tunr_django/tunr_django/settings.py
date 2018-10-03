@@ -78,9 +78,10 @@ DATABASES = {
     'default': {
         'ENGINE': 'django.db.backends.postgresql_psycopg2',
         'NAME': 'tunr',
-        'USER': 'tunruser',
-        'PASSWORD': 'tunr',
+        # 'USER': 'tunruser',
+        # 'PASSWORD': 'tunr',
         'HOST': 'localhost',
+    }
 }
 
 
