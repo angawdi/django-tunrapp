@@ -6,4 +6,5 @@ urlpatterns = [
 	path('songs', views.song_list, name="song_list"),
 	path('artists/<int:pk>', views.artist_detail, name="artist_detail"), #just like artists/:id in nodejs
 	path('songs/<int:pk>', views.song_detail, name="song_detail"),
+	path('artists/new', views.artist_create, name="artist_create"),
 ]
