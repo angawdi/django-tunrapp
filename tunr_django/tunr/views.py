@@ -28,3 +28,14 @@ def artist_create(request):
 	else:
 		form = ArtistForm()
 		return render(request, 'artist_form.html', {'form': form})
+
+def artist_edit(request, pk):
+	artist = Artist.objects.get(id=pk)
+		if request.method == 'POST':
+			form = ArtistForm(request.POST, instance=artist)
+			if form.is_valid():
+				artist = form.save()
+				return redirect('artist_detail', pk=artist.pk)
+			else:
+				form = ArtistForm(instance=artist)
+				return render(request, 'artist_form.html', {'form': form})
