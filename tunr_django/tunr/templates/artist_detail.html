@@ -1,7 +1,7 @@
 {% extends 'base.html' %}
 
 {% block content %}
-<h2>{{ artist.name }}</h2>
+<h2>{{ artist.name }}(<a href="{% url 'artist_edit' pk=artist.pk %}">edit</a>)</h2>
 <h4>Home country: {{ artist.nationality}}</h4>
 <img src="{{ artist.photo_url}}" alt="artist_photo" class="artist-photo">
 
